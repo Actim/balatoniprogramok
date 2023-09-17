@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bing Maps Markerek</title>
+    <title>Balatoni helyszínek</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key=0THsVTkjqrGrAseConbv~lLNC_EstflQ95cRn07HdsA~An4kf1i13ZGcVG_07vEQWRp6G14ht1pe2SwWILAirOepSnqst10sIM5Tbxd0QmN8"></script>
     <script type="text/javascript">
@@ -14,10 +14,41 @@
                 zoom: 9 // Alap zoom amivel megnyilik
             });
 
+            var searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function () {
+                searchMarkers(searchInput.value.toLowerCase());
+            });
+
             markers = [
-                { location: new Microsoft.Maps.Location(46.748571, 17.552284), title: 'Fonyódi Kutyás Fürdetőhely', description: 'Nyilvános strand ahol lehet fürdetni a kutyákat!' },
-                { location: new Microsoft.Maps.Location(46.748997, 17.550911), title: 'SUPport - Fonyód', description: 'Supozok számára kiváló strand rész, állatbarát, szóval ide is lehet hozni a kutyusokat.' },
-                { location: new Microsoft.Maps.Location(46.770863, 17.633930), title: 'Dutra Múzeum', description: 'Régi haszongépjármű múzeum.' }
+            { location: new Microsoft.Maps.Location(46.82114492768894, 17.591566199593924), title: 'Palkövei Strand', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.79589466165902, 17.51408335097649), title: 'Midi Strand', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.78843441384169, 17.386138340849662), title: 'Balatonederics Strand', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.764656724206525, 17.361808775714035), title: 'Pikkely Tanya', description: 'Horgászat' },
+            { location: new Microsoft.Maps.Location(46.75757188918426, 17.358327235221168), title: 'Soós-öböl', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.75596096367778, 17.357397197395937), title: 'Balatoni Bringakörút', description: 'Bringázás' },
+            { location: new Microsoft.Maps.Location(46.751290411394834, 17.3541295134344), title: 'Játszótér', description: 'Játszótér' },
+            { location: new Microsoft.Maps.Location(46.75097545375648, 17.350688844761972), title: 'Carina Camping', description: 'Tábór' },
+            { location: new Microsoft.Maps.Location(46.74910381632974, 17.34828549253743), title: 'Püspökladányi Gyermek- és Ifjúsági TÁBORA', description: 'Tábór' },
+            { location: new Microsoft.Maps.Location(46.754112100148554, 17.31701142507851), title: 'Eldorádó Fogadó és Kemping', description: '' },
+            { location: new Microsoft.Maps.Location(46.75396503785753, 17.30887894224179), title: 'Lido Strand III', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.76065254625052, 17.290052711471976), title: 'Gyenesdiási Strand', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.760957679167596, 17.290093900219627), title: 'Élménypark Diási Játékstrand', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.76324698329382, 17.277630968022827), title: 'Gyenesi Lidóstrand', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.76480603908324, 17.267404558212597), title: 'Libás Strand', description: 'Fürdő' },
+            { location: new Microsoft.Maps.Location(46.753134465199125, 17.333165106734302), title: 'Vizes Élőhlyūnk Park', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.753663755672385, 17.332499971174844), title: 'Tóvölgyi László sétány', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.75718359404535, 17.302441472285967), title: 'Vonyarc Marina', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.75814370976881, 17.25587054640766), title: 'Keszthely Móló', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.75903966481374, 17.25389934432719), title: 'Keszthely felirat', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.83611598575169, 17.621341741038574), title: 'Fülöp-hegyi Millenniumi kilátó', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.813431857234356, 17.56545694146192), title: 'Bökk-hegyi kilátó', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.803360788815866, 17.49627579219392), title: 'Kisfaludy-kilátó', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.80458835089165, 17.436640003177388), title: 'Szigligeti vár', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.792518232282816, 17.370225014779066), title: 'Csodabogyós-barlang bázis', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.78898577496003, 17.37693123890199), title: 'Fekete-kastély', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.78578653021085, 17.37550469306114), title: 'Afrika Múzeum', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.77723167360425, 17.357045003931027), title: 'Batsányi-kilátó', description: 'Látványosság' },
+            { location: new Microsoft.Maps.Location(46.77044759918316, 17.361991236796182), title: 'Szépkilátó', description: 'Látványosság' },
                 // További markerek hozzáadása
             ];
 
@@ -48,7 +79,6 @@
             map.entities.clear(); // Törli az összes markert a térképről
 
             if (searchTerm === "") {
-                console.log(markers);
                 addMarkers(markers); // Ha az input mező üres, jelenítse meg az összes markert
             } else {
                 var matchingMarkers = markers.filter(function (marker) {
@@ -65,7 +95,7 @@
     <div class="col-md-9 p-3 mx-auto">
         <div class="d-flex">
             <input type="text" class="form-control" id="searchInput" placeholder="Keresés">
-            <button class="btn btn-outline-success" onclick="searchMarkers()">Keresés</button>
+            <!--<button class="btn btn-outline-success" onclick="searchMarkers()">Keresés</button>-->
         </div>
         <div class="p-3" id="infoDiv"></div>
     </div>
