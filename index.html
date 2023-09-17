@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bing Maps Markerek</title>
+    <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key=0THsVTkjqrGrAseConbv~lLNC_EstflQ95cRn07HdsA~An4kf1i13ZGcVG_07vEQWRp6G14ht1pe2SwWILAirOepSnqst10sIM5Tbxd0QmN8"></script>
+    <script type="text/javascript">
+        var map;
+
+        function loadMapScenario() {
+            // Térkép inicializálása
+                map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                center: new Microsoft.Maps.Location(46.826463, 17.692785), // Középpont
+                zoom: 9 // Alap zoom amivel megnyilik
+            });
+
+            markers = [
+                { location: new Microsoft.Maps.Location(46.748571, 17.552284), title: 'Fonyódi Kutyás Fürdetőhely', description: 'Nyilvános strand ahol lehet fürdetni a kutyákat!' },
+                { location: new Microsoft.Maps.Location(46.748997, 17.550911), title: 'SUPport - Fonyód', description: 'Supozok számára kiváló strand rész, állatbarát, szóval ide is lehet hozni a kutyusokat.' },
+                { location: new Microsoft.Maps.Location(46.770863, 17.633930), title: 'Dutra Múzeum', description: 'Régi haszongépjármű múzeum.' }
+                // További markerek hozzáadása
+            ];
+
+            addMarkers(markers);
+        }
+        
+
+        function addMarkers(markers) {
+            markers.forEach(function (marker) {
+                var pin = new Microsoft.Maps.Pushpin(marker.location, { title: marker.title });
+                pin.metadata = {
+                    description: marker.description
+                };
+                Microsoft.Maps.Events.addHandler(pin, 'click', function () {
+                    showInfo(marker);
+                });
+                map.entities.push(pin);
+            });
+        }
+
+        function showInfo(marker) {
+            alert(marker.title + ': ' + marker.description);
+        }
+
+        function searchMarkers() {
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            map.entities.clear(); // Törli az összes markert a térképről
+
+            if (searchTerm === "") {
+                console.log(markers);
+                addMarkers(markers); // Ha az input mező üres, jelenítse meg az összes markert
+            } else {
+                var matchingMarkers = markers.filter(function (marker) {
+                    return marker.title.toLowerCase().includes(searchTerm) || marker.description.toLowerCase().includes(searchTerm);
+                });
+
+                addMarkers(matchingMarkers); // Hozzáadja a keresési eredményeket a térképhez
+            }
+        }
+
+    </script>
+</head>
+<body onload="loadMapScenario();">
+    <input type="text" id="searchInput" placeholder="Keresés">
+    <button onclick="searchMarkers()">Keresés</button>
+    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+</body>
+</html>
