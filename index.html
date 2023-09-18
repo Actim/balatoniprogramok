@@ -8,10 +8,9 @@
         var map;
 
         function loadMapScenario() {
-            // Térkép inicializálása
                 map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
-                center: new Microsoft.Maps.Location(46.826463, 17.692785), // Középpont
-                zoom: 9 // Alap zoom amivel megnyilik
+                center: new Microsoft.Maps.Location(46.826463, 17.692785),
+                zoom: 9
             });
 
             var searchInput = document.getElementById('searchInput');
@@ -51,8 +50,7 @@
             { location: new Microsoft.Maps.Location(46.77044759918316, 17.361991236796182), title: 'Szépkilátó', description: 'Látványosság' },
             { location: new Microsoft.Maps.Location(46.748571, 17.552284), title: 'Fonyódi Kutyás Fürdetőhely', description: 'Nyilvános strand ahol lehet fürdetni a kutyákat!' },
             { location: new Microsoft.Maps.Location(46.748997, 17.550911), title: 'SUPport - Fonyód', description: 'Supozok számára kiváló strand rész, állatbarát, szóval ide is lehet hozni a kutyusokat.' },
-            { location: new Microsoft.Maps.Location(46.770863, 17.633930), title: 'Dutra Múzeum', description: 'Régi haszongépjármű múzeum.' }, 
-                // További markerek hozzáadása
+            { location: new Microsoft.Maps.Location(46.770863, 17.633930), title: 'Dutra Múzeum', description: 'Régi haszongépjármű múzeum.' }
             ];
 
             addMarkers(markers);
@@ -79,26 +77,30 @@
 
         function searchMarkers() {
             var searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            map.entities.clear(); // Törli az összes markert a térképről
+            map.entities.clear();
 
             if (searchTerm === "") {
-                addMarkers(markers); // Ha az input mező üres, jelenítse meg az összes markert
+                addMarkers(markers);
             } else {
                 var matchingMarkers = markers.filter(function (marker) {
                     return marker.title.toLowerCase().includes(searchTerm) || marker.description.toLowerCase().includes(searchTerm);
                 });
 
-                addMarkers(matchingMarkers); // Hozzáadja a keresési eredményeket a térképhez
+                addMarkers(matchingMarkers);
             }
         }
 
     </script>
 </head>
 <body onload="loadMapScenario();">
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Balaton körüli látványosságok</h1>
+        <p>A Balaton körül nyaralsz, és nincs mit csinálnod? Böngéssz a térképen!</p>
+    </header>
+
     <div class="col-md-9 p-3 mx-auto">
         <div class="d-flex">
             <input type="text" class="form-control" id="searchInput" placeholder="Keresés">
-            <!--<button class="btn btn-outline-success" onclick="searchMarkers()">Keresés</button>-->
         </div>
         <div class="p-3" id="infoDiv"></div>
     </div>
