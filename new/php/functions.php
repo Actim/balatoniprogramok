@@ -56,7 +56,11 @@
                         'longitude': {$longtude}
                     },
                     'title': '{$data_query['title']}',
-                    'description': '{$data_query['description']}'
+                    'description': '{$data_query['description']}',
+                    'tags': '{$data_query['tags']}',
+                    'city': '{$data_query['city']}',
+                    'part': '{$data_query['part']}',
+                    'irany': '{$data_query['irany']}'
                 },
             ";
         
