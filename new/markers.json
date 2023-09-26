@@ -1,0 +1,146 @@
+[
+    {
+        "location": {
+            "latitude": 46.8586337063125,
+            "longitude": 17.889298328075203
+        },
+        "title": "Blatonföldvári Keleti strand",
+        "description": "Nagyon szép a strand. Gondozott és ápolt minden. Odafigyelnek mindenre. Van különböző vízi sportok bérlésére lehetőség (surf, kitesurf, sup stb). A büfé (Mamzi) nagyon jó, igen finomakat lehet ott enni és gyorsan szolgálnak ki. A pizzák a hekkek és a burgerek is nagyon finomak."
+    },
+    {
+        "location": {
+            "latitude": 46.849403257267326,
+            "longitude": 17.869945216830107
+        },
+        "title": "Nyugati szabadstrand",
+        "description": "Ingyenes,Balatonföldvár egyik legkedveltebb strandja. A Kvassay-sétány végén helyezkedik el a Nyugati strand. A parti sáv itt kiszélesedik, hatalmas fák adnak árnyékot a füves terület jelentős részén. A strandon játszótér, óriás sakkjáték, beton napozóplacc áll a vendégek rendelkezésére."
+    },
+    {
+        "location": {
+            "latitude": 46.84746352945684,
+            "longitude": 17.863646468541518
+        },
+        "title": "Balatonföldvár Kutyafürdetőhely",
+        "description": "A balatonföldvári Kutyafürdetőhelyet 2016 óta vehetik igénybe ingyenesen a kiskedvencekkel érkező gazdik. A kutyás strand a város nyugati határától körülbelül 300 méterre helyezkedik el, fás és füves környezetben. Korábban a Nyugati szabadstrandhoz tartozott, de az elmúlt időkben teljesen külön üzemel."
+    },
+    {
+        "location": {
+            "latitude": 46.84250287170705,
+            "longitude": 17.85424800819276
+        },
+        "title": "Irmák Nyaraló Strandja",
+        "description": "Fürdő"
+    },
+    {
+        "location": {
+            "latitude": 46.838844107520764,
+            "longitude": 17.847093496472787
+        },
+        "title": "Bendegúz outdoor swimming pool",
+        "description": "Fürdő"
+    },
+    {
+        "location": {
+            "latitude": 46.83714147013886,
+            "longitude": 17.839752772952224
+        },
+        "title": "Balatonszárszó szabadstrand",
+        "description": "Balatonszárszó nagyobbik ingyenes strandja a Móricz utcai szabadstrandja homokos, lidós parttal és játszótérrel várja a fürdőzőket. Csomagmegőrző, étkezde, játszótér, strandröplabda pálya is, valamint vízibicikli bérlési lehetőség is van."
+    },
+    {
+        "location": {
+            "latitude": 46.832105040746974,
+            "longitude": 17.828408448903545
+        },
+        "title": "Balatonszárszó Strand",
+        "description": ""
+    },
+    {
+        "location": {
+            "latitude": 46.845582707557234,
+            "longitude": 17.865561246734995
+        },
+        "title": "Lookout of Balatonföldvár",
+        "description": "Múzeum"
+    },
+    {
+        "location": {
+            "latitude": 46.84116403069938,
+            "longitude": 17.85279239615968
+        },
+        "title": "Vöröskereszt tábor",
+        "description": "Tábor"
+    },
+    {
+        "location": {
+            "latitude": 46.83312839098431,
+            "longitude": 17.83153206102954
+        },
+        "title": "Csukás színház",
+        "description": "Ha szeretnétek a családdal egy kis kikapcsolódást akkor érdemes elmenni ide, hiszen sok sok koncert, rendezvények, befogadott produkciók találhatók itt."
+    },
+    {
+        "location": {
+            "latitude": 46.83204207920917,
+            "longitude": 17.828592359965047
+        },
+        "title": "Strandfürdő",
+        "description": "Fürdő"
+    },
+    {
+        "location": {
+            "latitude": 46.83334858663516,
+            "longitude": 17.82960087049416
+        },
+        "title": "József Attila Emlékmű",
+        "description": "Ha szereted a költészetet mindenkép látogasd meg!"
+    },
+    {
+        "location": {
+            "latitude": 46.827565398843774,
+            "longitude": 17.81285328176906
+        },
+        "title": "Szabadstrand",
+        "description": "Fűrdő"
+    },
+    {
+        "location": {
+            "latitude": 46.8214778366784,
+            "longitude": 17.797336578269196
+        },
+        "title": "Surf Tábor",
+        "description": "Ha izgalmasan és játékosan szeretnéd megtanulni a szöfözés alapjait akkor minden képpen itt a helyed!"
+    },
+    {
+        "location": {
+            "latitude": 46.821331007250606,
+            "longitude": 17.795233726378772
+        },
+        "title": "Balatonőszödi Szabadstrand",
+        "description": "A balatonőszödi Ligetes szabadstrand elsősorban a nyugodt pihenésre vágyókat várja hangulatos, fás-ligetes környezetével, szépen gondozott füves területével. A jizzel val themit meghoztak"
+    },
+    {
+        "location": {
+            "latitude": 46.8212282591753,
+            "longitude": 17.793881581105953
+        },
+        "title": "Balatonőszöd Kutyafürdető",
+        "description": "Az alosztohyd és Árkád koron meg található a Kutyafürdető szabadstrand letelepedőhelyének, ahol a kis kedvenceink egy kis panc bocado themit. A dalmat anjing fel is fríshetik mag."
+    },
+    {
+        "location": {
+            "latitude": 46.82139905488568,
+            "longitude": 17.792921157723936
+        },
+        "title": "Elisabeth Willman Park",
+        "description": "Szép, parkos terület a fürdőtől nem messze."
+    },
+    {  
+        "location": {
+            "latitude": 46.83452205212438,
+            "longitude": 17.816820672116823
+        },
+        "title": "Balatonőszöd - Horgászok",
+        "description": "Horgászok paradicsoma!"
+    }
+]
